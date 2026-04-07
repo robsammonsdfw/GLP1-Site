@@ -9,96 +9,121 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-brand-cream font-sans text-brand-dark-blue">
       <Header />
       
-      <main className="pt-32">
-        {/* HERO SECTION */}
-        <section className="relative max-w-[1450px] mx-auto px-6 md:px-12 mb-24">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+      <main>
+        {/* HERO SECTION - FULL VIDEO BACKGROUND */}
+        <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-brand-dark-blue flex flex-col justify-between">
+          {/* Video Background */}
+          <div className="absolute inset-0 z-0">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="w-full h-full object-cover opacity-60"
             >
-              <h1 className="text-5xl md:text-7xl font-bold serif leading-[0.95] mb-8 tracking-tighter">
+              <source src="/HeroPrism.mp4" type="video/mp4" />
+            </video>
+            {/* Overlays for readability and depth */}
+            <div className="absolute inset-0 bg-gradient-to-b from-brand-dark-blue/60 via-transparent to-brand-dark-blue"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-brand-dark-blue to-transparent"></div>
+          </div>
+
+          {/* Top Content (Centered) */}
+          <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-6 pt-20">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="max-w-5xl"
+            >
+              <h1 className="text-6xl md:text-8xl font-bold serif leading-[0.9] mb-8 tracking-tighter text-white">
                 Lose Fat. Protect Muscle. <br />
                 <span className="text-brand-teal">One Flat Monthly Price.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-brand-dark-blue/70 mb-10 leading-relaxed max-w-xl">
+              <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed max-w-2xl mx-auto">
                 Physician-prescribed GLP-1 therapy with transparent pricing and a muscle-preservation protocol built for serious results.
               </p>
-              
-              <div className="flex flex-wrap gap-4 mb-12">
-                <div className="bg-white p-6 rounded-3xl shadow-sm border border-brand-dark-blue/5 flex-1 min-w-[200px]">
-                  <h3 className="text-sm font-bold uppercase tracking-widest text-brand-dark-blue/40 mb-2">Semaglutide</h3>
-                  <p className="text-3xl font-bold serif">$249<span className="text-lg font-sans text-brand-dark-blue/40">/month</span></p>
-                </div>
-                <div className="bg-white p-6 rounded-3xl shadow-sm border border-brand-dark-blue/5 flex-1 min-w-[200px]">
-                  <h3 className="text-sm font-bold uppercase tracking-widest text-brand-dark-blue/40 mb-2">Tirzepatide</h3>
-                  <p className="text-3xl font-bold serif">$429<span className="text-lg font-sans text-brand-dark-blue/40">/month</span></p>
-                </div>
-              </div>
-
-              <ul className="space-y-4 mb-12">
-                {[
-                  "Starter and higher doses — same flat monthly price",
-                  "No membership fees",
-                  "No dose-based price increases",
-                  "Licensed physicians nationwide"
-                ].map((benefit, i) => (
-                  <li key={i} className="flex items-center gap-3 font-medium">
-                    <div className="bg-brand-teal/10 p-1 rounded-full">
-                      <Check className="w-4 h-4 text-brand-teal" />
-                    </div>
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-col sm:flex-row gap-6 items-center">
-                <a 
-                  href="https://shop.embracehealth.ai/collections/weight-loss" 
-                  className="w-full sm:w-auto px-10 py-5 bg-brand-teal text-white font-bold rounded-full text-center hover:scale-105 transition-all shadow-xl shadow-brand-teal/20"
-                >
-                  Start My Medical Assessment
-                </a>
-                <p className="text-xs font-bold uppercase tracking-widest text-brand-dark-blue/30">
-                  Takes 2–3 minutes. No obligation.
-                </p>
-              </div>
             </motion.div>
+          </div>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="relative aspect-square rounded-[4rem] overflow-hidden bg-white shadow-2xl group"
-            >
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-              >
-                <source src="/HeroPrism.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/40 to-transparent pointer-events-none"></div>
-              <div className="absolute bottom-12 left-12 right-12 text-white">
-                <p className="text-sm font-bold uppercase tracking-[0.3em] mb-4 opacity-70">The Protocol</p>
-                <h2 className="text-3xl font-bold serif leading-tight">Built for Muscle Preservation.</h2>
+          {/* Bottom Content (Pricing, CTA, and Partner Bar) */}
+          <div className="relative z-10 w-full">
+            <div className="max-w-[1450px] mx-auto px-6 md:px-12 pb-12">
+              <div className="flex flex-col lg:flex-row items-end justify-between gap-12 mb-12">
+                {/* Pricing Row */}
+                <div className="flex flex-wrap gap-4 w-full lg:w-auto">
+                  <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 flex-1 min-w-[200px] text-white">
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Semaglutide</h3>
+                    <p className="text-3xl font-bold serif">$249<span className="text-lg font-sans text-white/40">/mo</span></p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 flex-1 min-w-[200px] text-white">
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Tirzepatide</h3>
+                    <p className="text-3xl font-bold serif">$429<span className="text-lg font-sans text-white/40">/mo</span></p>
+                  </div>
+                </div>
+
+                {/* CTA and Microtext */}
+                <div className="flex flex-col items-center lg:items-end gap-4">
+                  <a 
+                    href="https://shop.embracehealth.ai/collections/weight-loss" 
+                    className="px-12 py-6 bg-brand-teal text-white font-bold rounded-full text-lg hover:scale-105 transition-all shadow-2xl shadow-brand-teal/40"
+                  >
+                    Start My Medical Assessment
+                  </a>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">
+                    Takes 2–3 minutes. No obligation.
+                  </p>
+                </div>
               </div>
-            </motion.div>
+
+              {/* Partner/Ad Bar (Integrated into the bottom of the hero) */}
+              <div className="pt-12 border-t border-white/5 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                <span className="text-white font-bold tracking-widest text-[10px] uppercase">Licensed MDs</span>
+                <span className="text-white font-bold tracking-widest text-[10px] uppercase">Free Shipping</span>
+                <span className="text-white font-bold tracking-widest text-[10px] uppercase">100% Online</span>
+                <span className="text-white font-bold tracking-widest text-[10px] uppercase">No Membership Fees</span>
+                <span className="text-white font-bold tracking-widest text-[10px] uppercase">Nationwide Coverage</span>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* STAGGERED VIDEO SECTIONS */}
-        <section className="bg-white py-32 overflow-hidden">
+        {/* PROTOCOL INTRO SECTION */}
+        <section className="bg-brand-dark-blue py-24 border-t border-white/5">
           <div className="max-w-[1450px] mx-auto px-6 md:px-12">
-            <div className="text-center max-w-3xl mx-auto mb-24">
-              <h2 className="text-4xl md:text-6xl font-bold serif mb-8 tracking-tighter">This Is Not a Prescription Mill.</h2>
-              <p className="text-xl text-brand-dark-blue/60 leading-relaxed">
-                Most telehealth companies ship medication and hope you respond. We combine GLP-1 therapy with protein targets, structured workout programming, and optional 3D body composition tracking to protect lean mass and optimize metabolic response.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <h2 className="text-4xl md:text-6xl font-bold serif mb-8 tracking-tighter text-white">This Is Not a Prescription Mill.</h2>
+                <p className="text-xl text-white/60 leading-relaxed mb-8">
+                  Most telehealth companies ship medication and hope you respond. We combine GLP-1 therapy with protein targets, structured workout programming, and optional 3D body composition tracking to protect lean mass and optimize metabolic response.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    "Starter and higher doses — same flat monthly price",
+                    "No dose-based price increases",
+                    "Muscle-preservation protocol included",
+                    "Direct access to clinical support"
+                  ].map((benefit, i) => (
+                    <li key={i} className="flex items-center gap-3 font-medium text-white/80">
+                      <div className="bg-brand-teal/20 p-1 rounded-full">
+                        <Check className="w-4 h-4 text-brand-teal" />
+                      </div>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="relative aspect-video rounded-[3rem] overflow-hidden bg-white/5 shadow-2xl">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-brand-teal rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all">
+                    <Play className="w-8 h-8 text-white fill-white" />
+                  </div>
+                </div>
+                <img src="https://picsum.photos/seed/protocol/1200/800" className="w-full h-full object-cover opacity-40" alt="Protocol Video" referrerPolicy="no-referrer" />
+              </div>
             </div>
+          </div>
+        </section>
 
             <div className="space-y-32">
               {/* Row 1 */}
