@@ -15,7 +15,7 @@ const App: React.FC = () => {
           {/* Video Background */}
           <div className="absolute inset-0 z-0">
             <video 
-              autoPlay 
+              autoPlay
               loop 
               muted 
               playsInline 
