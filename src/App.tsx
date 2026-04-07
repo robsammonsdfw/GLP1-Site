@@ -79,7 +79,7 @@ const App: React.FC = () => {
                 playsInline 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               >
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-running-on-the-beach-at-sunset-1282-large.mp4" type="video/mp4" />
+                <source src="/HeroPrism.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/40 to-transparent pointer-events-none"></div>
               <div className="absolute bottom-12 left-12 right-12 text-white">
