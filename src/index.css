@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
+
+@theme {
+  --color-brand-teal: #00B6A0;
+  --color-brand-orange: #F26422;
+  --color-brand-dark-blue: #002534;
+  --color-brand-cream: #E6E7E9;
+  --color-accent-brown: #B87333;
+  --color-green-button: #0A2621;
+  
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'DM Serif Display', serif;
+}
+
+/* Global Brand Variables */
+:root {
+  --brand-teal: #00B6A0;
+  --brand-orange: #F26422;
+  --brand-dark-blue: #002534;
+  --brand-cream: #E6E7E9;
+  --accent-brown: #B87333;
+  --green-button: #0A2621;
+  --card-white: #ffffff;
+}
+
+/* Global Font and Body Settings */
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--brand-cream);
+  color: var(--brand-dark-blue);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .serif {
+  font-family: 'DM Serif Display', serif;
+  letter-spacing: -0.04em;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brand-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-dark-blue);
+  border-radius: 10px;
+}
+
+/* Keyframe Animations */
+@keyframes chartScrollVertical {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility Classes */
+.charts-stream {
+  animation: chartScrollVertical 60s linear infinite;
+}
+
+.animate-reveal {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 40px 80px -20px rgba(0, 37, 52, 0.1);
+}
+
+/* Brand Helpers */
+.text-brand-teal { color: var(--brand-teal); }
+.text-brand-orange { color: var(--brand-orange); }
+.bg-brand-cream { background-color: var(--brand-cream); }
+
+.hero-card-base {
+  @apply relative overflow-visible transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] bg-white;
+}
+
+/* Large Widget Specifics */
+.widget-large {
+  @apply p-8 rounded-[2.5rem] min-h-[400px];
+}
+
+/* Minor Widget Specifics */
+.widget-minor {
+  @apply flex items-center justify-between p-6 bg-white/50 border border-[#002534]/5 rounded-3xl transition-all duration-500;
+}
+
+.widget-minor:hover {
+  @apply bg-white shadow-lg;
+}
+
+/* Shared Image Lift Animation */
+.product-lift {
+  @apply transform transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)];
+}
+
+.group:hover .product-lift {
+  @apply -translate-y-16 scale-110;
+}
