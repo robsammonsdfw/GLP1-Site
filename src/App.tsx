@@ -125,6 +125,9 @@ const App: React.FC = () => {
           </div>
         </section>
 
+        {/* STAGGERED VIDEO SECTIONS */}
+        <section className="bg-white py-32 overflow-hidden">
+          <div className="max-w-[1450px] mx-auto px-6 md:px-12">
             <div className="space-y-32">
               {/* Row 1 */}
               <div className="grid lg:grid-cols-2 gap-20 items-center">
