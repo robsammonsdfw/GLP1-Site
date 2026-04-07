@@ -29,7 +29,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Top Content (Centered) */}
-          <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-6 pt-20">
+          <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-6 pt-40 md:pt-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
