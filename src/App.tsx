@@ -174,23 +174,20 @@ const App: React.FC = () => {
 
               {/* Row 2 */}
               <div className="grid lg:grid-cols-2 gap-20 items-center">
-                <div className="relative group">
-                  <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-                    <img 
-                      autoPlay 
-                      loop 
-                      muted 
-                      playsInline 
-                      className="w-full h-full object-cover"
-                    >
-                      src="/metabolic.png" 
-                    </img>
-                  </div>
-                  <div className="absolute -top-10 -right-10 bg-brand-teal text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
-                    <p className="text-sm font-bold uppercase tracking-widest mb-2 opacity-70">Metabolic Reset</p>
-                    <p className="text-xl font-bold serif">A structured protocol for lasting results.</p>
-                  </div>
-                </div>
+  <div className="relative group">
+    <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
+      {/* FIXED: img is now self-closing and video attributes are removed */}
+      <img 
+        src="/metabolic.png" 
+        className="w-full h-full object-cover" 
+        alt="Metabolic Reset Protocol"
+      />
+    </div>
+    <div className="absolute -top-10 -right-10 bg-brand-teal text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
+      <p className="text-sm font-bold uppercase tracking-widest mb-2 opacity-70">Metabolic Reset</p>
+      <p className="text-xl font-bold serif">A structured protocol for lasting results.</p>
+    </div>
+  </div>
                 <div>
                   <h3 className="text-3xl md:text-5xl font-bold serif mb-8 tracking-tight">Most Patients Choose the 3-Month Metabolic Reset</h3>
                   <div className="space-y-6 mb-12">
