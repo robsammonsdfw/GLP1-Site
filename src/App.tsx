@@ -183,7 +183,7 @@ const App: React.FC = () => {
                       playsInline 
                       className="w-full h-full object-cover"
                     >
-                      <source src="/metabolic.png" />
+                      src="/metabolic.png" 
                     </img>
                   </div>
                   <div className="absolute -top-10 -right-10 bg-brand-teal text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
