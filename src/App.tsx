@@ -119,7 +119,7 @@ const App: React.FC = () => {
                     <Play className="w-8 h-8 text-white fill-white" />
                   </div>
                 </div>
-                <img src="https://picsum.photos/seed/protocol/1200/800" className="w-full h-full object-cover opacity-40" alt="Protocol Video" referrerPolicy="no-referrer" />
+                <img src="/ScripMillimg.png" className="w-full h-full object-cover opacity-40" alt="Protocol Video" referrerPolicy="no-referrer" />
               </div>
             </div>
           </div>
