@@ -90,43 +90,41 @@ const App: React.FC = () => {
 
         {/* PROTOCOL INTRO SECTION */}
         <section className="bg-brand-dark-blue py-24 border-t border-white/5">
-          <div className="max-w-[1450px] mx-auto px-6 md:px-12">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div>
-                <h2 className="text-4xl md:text-6xl font-bold serif mb-8 tracking-tighter text-white">This Is Not a Prescription Mill.</h2>
-                <p className="text-xl text-white/60 leading-relaxed mb-8">
-                  Most telehealth companies ship medication and hope you respond. We combine GLP-1 therapy with protein targets, structured workout programming, and optional 3D body composition tracking to protect lean mass and optimize metabolic response.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Starter and higher doses — same flat monthly price",
-                    "No dose-based price increases",
-                    "Muscle-preservation protocol included",
-                    "Direct access to clinical support"
-                  ].map((benefit, i) => (
-                    <li key={i} className="flex items-center gap-3 font-medium text-white/80">
-                      <div className="bg-brand-teal/20 p-1 rounded-full">
-                        <Check className="w-4 h-4 text-brand-teal" />
-                      </div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+  <div className="max-w-[1450px] mx-auto px-6 md:px-12">
+    <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <div>
+        <h2 className="text-4xl md:text-6xl font-bold serif mb-8 tracking-tighter text-white">This Is Not a Prescription Mill.</h2>
+        <p className="text-xl text-white/60 leading-relaxed mb-8">
+          Most telehealth companies ship medication and hope you respond. We combine GLP-1 therapy with protein targets, structured workout programming, and optional 3D body composition tracking to protect lean mass and optimize metabolic response.
+        </p>
+        <ul className="space-y-4">
+          {[
+            "Starter and higher doses — same flat monthly price",
+            "No dose-based price increases",
+            "Muscle-preservation protocol included",
+            "Direct access to clinical support"
+          ].map((benefit, i) => (
+            <li key={i} className="flex items-center gap-3 font-medium text-white/80">
+              <div className="bg-brand-teal/20 p-1 rounded-full">
+                <Check className="w-4 h-4 text-brand-teal" />
               </div>
-              <div className="relative aspect-video rounded-[3rem] overflow-hidden bg-white/5 shadow-2xl">
-  <div className="absolute inset-0 flex items-center justify-center">
-    <div className="w-20 h-20 bg-brand-teal rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all">
-      <Play className="w-8 h-8 text-white fill-white" />
+              {benefit}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* UPDATED IMAGE CONTAINER */}
+      <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
+        <img 
+          src="/ScripMillImg.jpg" 
+          className="w-full h-full object-cover" 
+          alt="Telehealth Consultation" 
+        />
+      </div>
     </div>
   </div>
-  {/* Updated: Pointed src to your local image in the public folder */}
-  <img 
-    src="/ScripMillImg.png" 
-    className="w-full h-full object-cover opacity-40" 
-    alt="Telehealth Consultation" 
-    referrerPolicy="no-referrer" 
-  />
-</div>
+</section>
             </div>
           </div>
         </section>
