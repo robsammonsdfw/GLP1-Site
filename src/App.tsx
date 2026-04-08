@@ -114,13 +114,19 @@ const App: React.FC = () => {
                 </ul>
               </div>
               <div className="relative aspect-video rounded-[3rem] overflow-hidden bg-white/5 shadow-2xl">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-brand-teal rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all">
-                    <Play className="w-8 h-8 text-white fill-white" />
-                  </div>
-                </div>
-                <img src="/ScripMillimg.png" className="w-full h-full object-cover opacity-40" alt="Protocol Video" referrerPolicy="no-referrer" />
-              </div>
+  <div className="absolute inset-0 flex items-center justify-center">
+    <div className="w-20 h-20 bg-brand-teal rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all">
+      <Play className="w-8 h-8 text-white fill-white" />
+    </div>
+  </div>
+  {/* Updated: Pointed src to your local image in the public folder */}
+  <img 
+    src="/ScripMillImg.png" 
+    className="w-full h-full object-cover opacity-40" 
+    alt="Telehealth Consultation" 
+    referrerPolicy="no-referrer" 
+  />
+</div>
             </div>
           </div>
         </section>
@@ -162,7 +168,7 @@ const App: React.FC = () => {
                       playsInline 
                       className="w-full h-full object-cover"
                     >
-                      <source src="/muscleloss.png" />
+                      <source src="https://assets.mixkit.co/videos/preview/mixkit-man-doing-push-ups-in-a-gym-4434-large.mp4" type="video/mp4" />
                     </video>
                   </div>
                   <div className="absolute -bottom-10 -left-10 bg-brand-orange text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
