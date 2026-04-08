@@ -157,7 +157,7 @@ const App: React.FC = () => {
         
         <div className="order-1 lg:order-2 relative group">
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-            {/* UPDATED: Replaced video with the muscleloss.jpg image */}
+            {/* UPDATED: Replaced video with the muscleloss.png image */}
             <img 
               src="/muscleloss.png" 
               className="w-full h-full object-cover" 
@@ -170,9 +170,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+
 
               {/* Row 2 */}
               <div className="grid lg:grid-cols-2 gap-20 items-center">
