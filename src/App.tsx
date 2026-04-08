@@ -114,7 +114,7 @@ const App: React.FC = () => {
         </ul>
       </div>
 
-      {/* UPDATED IMAGE CONTAINER */}
+      {/* UPDATED IMAGE CONTAINER: Normal color, no play button, fixed .png extension */}
       <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
         <img 
           src="/ScripMillImg.png" 
@@ -125,9 +125,6 @@ const App: React.FC = () => {
     </div>
   </div>
 </section>
-            </div>
-          </div>
-        </section>
 
         {/* STAGGERED VIDEO SECTIONS */}
         <section className="bg-white py-32 overflow-hidden">
