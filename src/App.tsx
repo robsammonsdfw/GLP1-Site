@@ -162,7 +162,7 @@ const App: React.FC = () => {
                       playsInline 
                       className="w-full h-full object-cover"
                     >
-                      <source src="https://assets.mixkit.co/videos/preview/mixkit-man-doing-push-ups-in-a-gym-4434-large.mp4" type="video/mp4" />
+                      <source src="/muscleloss.png" />
                     </video>
                   </div>
                   <div className="absolute -bottom-10 -left-10 bg-brand-orange text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
