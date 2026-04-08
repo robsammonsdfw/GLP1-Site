@@ -117,7 +117,7 @@ const App: React.FC = () => {
       {/* UPDATED IMAGE CONTAINER */}
       <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
         <img 
-          src="/ScripMillImg.jpg" 
+          src="/ScripMillImg.png" 
           className="w-full h-full object-cover" 
           alt="Telehealth Consultation" 
         />
