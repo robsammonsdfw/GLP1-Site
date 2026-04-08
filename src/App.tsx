@@ -128,50 +128,51 @@ const App: React.FC = () => {
 
         {/* STAGGERED VIDEO SECTIONS */}
         <section className="bg-white py-32 overflow-hidden">
-          <div className="max-w-[1450px] mx-auto px-6 md:px-12">
-            <div className="space-y-32">
-              {/* Row 1 */}
-              <div className="grid lg:grid-cols-2 gap-20 items-center">
-                <div className="order-2 lg:order-1">
-                  <h3 className="text-3xl md:text-5xl font-bold serif mb-8 tracking-tight">Why Muscle Loss Matters on GLP-1 Therapy</h3>
-                  <ul className="space-y-6 mb-12">
-                    {[
-                      "Rapid weight loss can reduce lean mass",
-                      "Low protein intake increases muscle loss risk",
-                      "Resistance training preserves metabolic rate",
-                      "Body composition matters more than scale weight"
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-4 text-lg text-brand-dark-blue/70">
-                        <span className="text-brand-orange font-bold text-2xl leading-none">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <a 
-                    href="https://shop.embracehealth.ai/collections/weight-loss" 
-                    className="inline-flex items-center gap-3 text-brand-teal font-bold text-lg hover:gap-5 transition-all"
-                  >
-                    Begin the 3-Month Metabolic Reset <ArrowRight className="w-5 h-5" />
-                  </a>
-                </div>
-                <div className="order-1 lg:order-2 relative group">
-                  <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-                    <video 
-                      autoPlay 
-                      loop 
-                      muted 
-                      playsInline 
-                      className="w-full h-full object-cover"
-                    >
-                      <source src="https://assets.mixkit.co/videos/preview/mixkit-man-doing-push-ups-in-a-gym-4434-large.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                  <div className="absolute -bottom-10 -left-10 bg-brand-orange text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
-                    <p className="text-sm font-bold uppercase tracking-widest mb-2 opacity-70">Protein First</p>
-                    <p className="text-xl font-bold serif">Protect your metabolic engine while losing fat.</p>
-                  </div>
-                </div>
-              </div>
+  <div className="max-w-[1450px] mx-auto px-6 md:px-12">
+    <div className="space-y-32">
+      {/* Row 1 */}
+      <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="order-2 lg:order-1">
+          <h3 className="text-3xl md:text-5xl font-bold serif mb-8 tracking-tight">Why Muscle Loss Matters on GLP-1 Therapy</h3>
+          <ul className="space-y-6 mb-12">
+            {[
+              "Rapid weight loss can reduce lean mass",
+              "Low protein intake increases muscle loss risk",
+              "Resistance training preserves metabolic rate",
+              "Body composition matters more than scale weight"
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-4 text-lg text-brand-dark-blue/70">
+                <span className="text-brand-orange font-bold text-2xl leading-none">•</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a 
+            href="https://shop.embracehealth.ai/collections/weight-loss" 
+            className="inline-flex items-center gap-3 text-brand-teal font-bold text-lg hover:gap-5 transition-all"
+          >
+            Begin the 3-Month Metabolic Reset <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+        
+        <div className="order-1 lg:order-2 relative group">
+          <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
+            {/* UPDATED: Replaced video with the muscleloss.jpg image */}
+            <img 
+              src="/muscleloss.png" 
+              className="w-full h-full object-cover" 
+              alt="Woman focusing on body composition" 
+            />
+          </div>
+          <div className="absolute -bottom-10 -left-10 bg-brand-orange text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
+            <p className="text-sm font-bold uppercase tracking-widest mb-2 opacity-70">Protein First</p>
+            <p className="text-xl font-bold serif">Protect your metabolic engine while losing fat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
               {/* Row 2 */}
               <div className="grid lg:grid-cols-2 gap-20 items-center">
