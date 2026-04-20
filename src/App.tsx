@@ -130,7 +130,7 @@ const App: React.FC = () => {
         <section className="bg-white py-32 overflow-hidden">
   <div className="max-w-[1450px] mx-auto px-6 md:px-12">
     <div className="space-y-32">
-      {/* Row 1 */}
+      {/* Row 1 - existing */}
       <div className="grid lg:grid-cols-2 gap-20 items-center">
         <div className="order-2 lg:order-1">
           <h3 className="text-3xl md:text-5xl font-bold serif mb-8 tracking-tight">Why Muscle Loss Matters on GLP-1 Therapy</h3>
@@ -157,7 +157,6 @@ const App: React.FC = () => {
         
         <div className="order-1 lg:order-2 relative group">
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-            {/* UPDATED: Replaced video with the muscleloss.png image */}
             <img 
               src="/muscleloss.png" 
               className="w-full h-full object-cover" 
@@ -171,12 +170,77 @@ const App: React.FC = () => {
         </div>
       </div>
 
+      {/* === NEW ROW: FREE APP INCLUDED WITH GLP-1 === */}
+      {/* Insert this entire block here (between Row 1 and Row 2) */}
+      <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="order-2 lg:order-1">
+          <div className="inline-flex items-center gap-2 bg-brand-teal/10 text-brand-teal px-6 py-2 rounded-3xl text-sm font-bold tracking-widest mb-6">
+            FREE WITH EVERY MONTH
+          </div>
+          
+          <h3 className="text-3xl md:text-5xl font-bold serif mb-6 tracking-tight">
+            Your Intelligent Health App
+          </h3>
+          
+          <p className="text-xl text-brand-dark-blue/70 mb-10 max-w-md">
+            Included at no extra cost. Track your 3D body scans, meals, workouts, sleep, labs, and progress — all powered by AI and personalized to your GLP-1 journey.
+          </p>
 
-              {/* Row 2 */}
-              <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <a 
+              href="/app" 
+              className="px-10 py-5 bg-brand-teal text-white font-bold rounded-3xl text-center hover:bg-brand-dark-blue transition-all inline-flex items-center justify-center gap-3"
+            >
+              Explore the App
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            
+            <a 
+              href="#" 
+              className="px-8 py-5 border border-brand-dark-blue/30 hover:border-brand-teal font-semibold rounded-3xl flex items-center justify-center gap-3"
+            >
+              Watch 60-Second Demo
+              <span className="text-xl">▶</span>
+            </a>
+          </div>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-brand-dark-blue/70">
+            <div className="flex items-center gap-2">
+              <span className="text-green-500 text-xl">✓</span>
+              No app download required
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-500 text-xl">✓</span>
+              HIPAA-conscious
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-500 text-xl">✓</span>
+              Works seamlessly with GLP-1
+            </div>
+          </div>
+        </div>
+        
+        <div className="order-1 lg:order-2 relative group">
+          <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
+            <img 
+              src="/app-mockup.png" 
+              className="w-full h-full object-cover" 
+              alt="Embrace Health App interface showing body scan, meal analysis, and dashboards" 
+            />
+          </div>
+          
+          {/* Floating callout badge (matches style of the other rows) */}
+          <div className="absolute -bottom-8 -left-8 bg-white text-brand-dark-blue p-6 rounded-3xl shadow-2xl max-w-[240px] hidden md:block">
+            <p className="text-sm font-bold uppercase tracking-widest text-brand-teal mb-2">Included Free</p>
+            <p className="text-xl font-bold serif">With every GLP-1 purchase</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Row 2 - existing */}
+      <div className="grid lg:grid-cols-2 gap-20 items-center">
   <div className="relative group">
     <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-      {/* FIXED: img is now self-closing and video attributes are removed */}
       <img 
         src="/metabolic.png" 
         className="w-full h-full object-cover" 
