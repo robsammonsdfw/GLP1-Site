@@ -170,10 +170,14 @@ const App: React.FC = () => {
         
         <div className="order-1 lg:order-2 relative group">
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-            <img 
-              src="/muscleloss.png" 
+            <video 
+              src="/glp1muscle.mp4" 
               className="w-full h-full object-cover" 
-              alt="Woman focusing on body composition" 
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="Woman focusing on body composition"
             />
           </div>
           <div className="absolute -bottom-10 -left-10 bg-brand-orange text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
