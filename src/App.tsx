@@ -52,15 +52,28 @@ const App: React.FC = () => {
               <div className="flex flex-col lg:flex-row items-end justify-between gap-12 mb-12">
                 {/* Pricing Row */}
                 <div className="flex flex-wrap gap-4 w-full lg:w-auto">
-                  <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 flex-1 min-w-[200px] text-white">
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Semaglutide</h3>
-                    <p className="text-3xl font-bold serif">$249<span className="text-lg font-sans text-white/40">/mo</span></p>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 flex-1 min-w-[200px] text-white">
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Tirzepatide</h3>
-                    <p className="text-3xl font-bold serif">$429<span className="text-lg font-sans text-white/40">/mo</span></p>
-                  </div>
-                </div>
+  {/* Semaglutide Card – now fully clickable */}
+  <a 
+    href="https://shop.embracehealth.ai/collections/weight-loss"
+    className="flex-1 min-w-[200px] group"
+  >
+    <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-white h-full transition-all hover:bg-white/20 hover:border-white/30 hover:scale-[1.03] cursor-pointer">
+      <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Semaglutide</h3>
+      <p className="text-3xl font-bold serif">$249<span className="text-lg font-sans text-white/40">/mo</span></p>
+    </div>
+  </a>
+
+  {/* Tirzepatide Card – now fully clickable */}
+  <a 
+    href="https://shop.embracehealth.ai/collections/weight-loss"
+    className="flex-1 min-w-[200px] group"
+  >
+    <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-white h-full transition-all hover:bg-white/20 hover:border-white/30 hover:scale-[1.03] cursor-pointer">
+      <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Tirzepatide</h3>
+      <p className="text-3xl font-bold serif">$429<span className="text-lg font-sans text-white/40">/mo</span></p>
+    </div>
+  </a>
+</div>
 
                 {/* CTA and Microtext */}
                 <div className="flex flex-col items-center lg:items-end gap-4">
@@ -221,7 +234,7 @@ const App: React.FC = () => {
         </div>
         
         <div className="order-1 lg:order-2 relative group">
-          <div className="aspect-[5/4] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
+          <div className="aspect-[6/4] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
             <img 
               src="/embraceapp.png" 
               className="w-full h-full object-cover" 
