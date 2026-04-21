@@ -266,11 +266,15 @@ const App: React.FC = () => {
       <div className="grid lg:grid-cols-2 gap-20 items-center">
   <div className="relative group">
     <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-      <img 
-        src="/metabolic.png" 
-        className="w-full h-full object-cover" 
-        alt="Metabolic Reset Protocol"
-      />
+    <video 
+              src="/metabolic.mp4" 
+              className="w-full h-full object-cover" 
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="Guy doing pushups"
+            />
     </div>
     <div className="absolute -top-10 -right-10 bg-brand-teal text-white p-8 rounded-3xl shadow-2xl max-w-[280px] hidden md:block animate-reveal">
       <p className="text-sm font-bold uppercase tracking-widest mb-2 opacity-70">Metabolic Reset</p>
