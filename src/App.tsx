@@ -129,11 +129,15 @@ const App: React.FC = () => {
 
       {/* UPDATED IMAGE CONTAINER: Normal color, no play button, fixed .png extension */}
       <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
-        <img 
-          src="/ScripMillImg.png" 
-          className="w-full h-full object-cover" 
-          alt="Telehealth Consultation" 
-        />
+      <video 
+              src="/telemed.mp4" 
+              className="w-full h-full object-cover" 
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="Telemedicine consultation"
+            />
       </div>
     </div>
   </div>
@@ -239,10 +243,14 @@ const App: React.FC = () => {
         
         <div className="order-1 lg:order-2 relative group">
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-cream shadow-xl">
-            <img 
-              src="/embraceapp.png" 
+          <video 
+              src="/embraceappvide.mp4" 
               className="w-full h-full object-cover" 
-              alt="Embrace Health App interface showing body scan, meal analysis, and dashboards" 
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="Embrace App hologram"
             />
           </div>
           
